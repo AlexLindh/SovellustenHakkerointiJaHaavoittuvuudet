@@ -1,0 +1,2 @@
+# SovellustenHakkerointiJaHaavoittuvuudet
+Tuntitehtävät ja kotiläksyt kurssille sovellusten hakkerointi ja haavoittuvuudet
