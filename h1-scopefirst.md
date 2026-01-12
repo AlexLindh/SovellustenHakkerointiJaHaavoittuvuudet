@@ -41,3 +41,34 @@ Käytössä olevat laitteet ovat tehtävieni aikana yhteydessä verkkoon.
 
 Virtuaalikone käytössä läppärillä.
 
+## b) Sidotaan Standardiin
+
+12.1.2026 12.05 - 12.1.2026 13.13
+
+2 Sidosryhmää kotiverkkossani: Minä itse ja Pilvipalvelut
+
+### Minä itse - datan säilyminen
+
+ISO 27001 -vaatimusalueisiin kohtiin: 6 Suunnittelu ja 8 Toiminta
+
+Näyttönä erilaiset suunnitteluvaiheet ja prosessit datan säilyttämistä varten. Varmuuskopioin tehtävät ja tarvittavat tiedot ulkoiselle tallennustilalle tai paikallisesti koneelle. (Riippuen onko verkkoyhteys laitteessa tiedoille riski tai ei).
+
+Tehtävät minulla on pilvessä verkkosivuilla ja paikallisesti tallennettuna laitteisiini (PC/Läppäri) erikseen.
+
+Kurssin muita tehtäviä varten, jos tarvitsee tallentaa tiedostoja, on minulla myös ulkoinen tallennustila, minne tallentaa tarvittavat tiedostot.
+
+### Pilvipalvelut - tiliturva/MFA
+
+ISO 27001 -vaatimusalueeseen kohtaan: 8 Toiminta
+
+Minulla on käytössä olevissa pilvipalveluissa ja kirjautumista vaativiin paikkoihin vahvat uniikit salasanat ja MFA käytössä.
+
+<img width="961" height="127" alt="kuva" src="https://github.com/user-attachments/assets/c80c7f39-5557-4f00-9c9e-149390a20c94" />
+
+Esimerkkinä githubin MFA asetukset ovat käytössä
+
+## Lähteet
+
+Iso-Anttila, L. & Karvinen, T. 2026. Standardit. Sovellusten hakkerointi ja haavoittuvuudet -opintojakson materiaalit Moodlessa. Haaga-Helia ammattikorkeakoulu. Luettu 12.1.2026.
+
+
