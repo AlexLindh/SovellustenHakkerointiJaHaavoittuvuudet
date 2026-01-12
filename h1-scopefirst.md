@@ -2,7 +2,7 @@
 
 ## a) Perustaso
 12.1.2026
-11.15
+11.15 - 11.55
 
 1. Mitä kuuluu soveltamisalaan?
 
