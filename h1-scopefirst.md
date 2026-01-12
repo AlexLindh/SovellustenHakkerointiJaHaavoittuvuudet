@@ -1,8 +1,7 @@
 # h1 - Scope first, Controls later
 
 ## a) Perustaso
-12.1.2026
-11.15 - 11.55
+12.1.2026 11.15 - 12.1.2026 11.55
 
 1. Mitä kuuluu soveltamisalaan?
 
