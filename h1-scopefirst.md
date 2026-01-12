@@ -8,7 +8,7 @@
 
 Oma harjoitusympäristöni on oma kotiverkkoni, johon kuuluu seuraavat laitteet ja työkalut:
 
-läppäri/pöytätietokone (Win11), reititin, puhelin, WLAN/LAN ja linux virtuaalikone läppärillä.
+läppäri/pöytätietokone (Win11), reititin, puhelin, WLAN/LAN ja linux virtuaalikone läppärillä (Debian13).
 
 2. Mitä rajasin pois ja miksi?
 
@@ -36,7 +36,9 @@ Mitä näyttöä voisin esittää?
 
 Reitittimen yhteydet -sivu
 
-Käytössä olevat laitteet ovat tehtävieni aikana yhteydessö verkkoon.
+Käytössä olevat laitteet ovat tehtävieni aikana yhteydessä verkkoon.
 
 <img width="3000" height="1500" alt="kuva" src="https://github.com/user-attachments/assets/92eb4b4e-8b83-488f-91ee-ce31f7296991" />
+
+Virtuaalikone käytössä läppärillä.
 
