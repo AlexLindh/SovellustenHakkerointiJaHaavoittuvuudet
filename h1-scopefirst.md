@@ -38,4 +38,5 @@ Reitittimen yhteydet -sivu
 
 Käytössä olevat laitteet ovat tehtävieni aikana yhteydessö verkkoon.
 
-Tulen myös myöhemmin kurssia varten asentamaan Linux virtuaalikoneen läppärilleni, jolloin lisään mahd. kuvat siitä tähän verkkosivulle.
+<img width="3000" height="1500" alt="kuva" src="https://github.com/user-attachments/assets/92eb4b4e-8b83-488f-91ee-ce31f7296991" />
+
