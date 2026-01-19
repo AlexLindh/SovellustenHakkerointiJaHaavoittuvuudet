@@ -84,6 +84,22 @@ Joten toisella yrityksellä `LIMIT 1 OFFSET 2` palautti minulle myös oikean sal
 
 ## b) Fix the vulnerability in 010-staff-only
 
+Olin aikaisemmilla kursseilla kuullut, että SQL injektioilta pystyy suojautumaan käyttämällä parametrisiä kyselyitä. Lähdinkin tätä kautta tarkistelemaan lähdekoodia.
+
+Sillä oma osaaminen ohjelmoinnissa ja koodissa on hieman ruosteessa lähdin googlettelemaan miten parametrisiä kyselyitä käytetään ja kirjoitetaan pythonissa. Kysyin myös tekoälyltä apuja tässä tehtävässä
+
+!KUVA alk koodi
+
+Sain selville, että `pin='"+pin+"'` osuus koodissa lukee käyttäjän kirjoittaman tekstin ja lisää sen suoriltaan tähän koodin, tämän takia myös SQL injektio on mahdollista.
+
+Pienen etsimisen jälkeen löysin, että pin koodi voidaan tallettaa erilliseen muuttujaan, joka estää suoran hyökkäyksen.
+
+!KUVA muutettu koodi
+
+Tämän muutoksen jälkeen testasin uudestaan saada salasanaa, mutta se epäonnistui. Näin koodi tuli korjattua.
+
+!KUVA lopputulos
+
 ## c) Solve dirfuzt-1
 
 ## d) Break into 020-your-eyes-only
