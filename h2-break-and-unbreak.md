@@ -11,9 +11,17 @@ Windows 11, AMD
 Oracle VirtualBox 7.2.2, Debian 13, NAT -network.
 
 
-## X) Lue ja tiivistä (kesken)
+## X) Lue ja tiivistä
 
-OWASP: OWASP Top 10 https://owasp.org/Top10/2021/A01_2021-Broken_Access_Control/index.html
+OWASP 2021: https://owasp.org/Top10/2021/A01_2021-Broken_Access_Control/index.html
+
+- Yleisin haavoittuvuus on rikkinäinen pääsynhallinta
+
+- Yritetään saada elevoitu pääsy alemmilla luvilla ja rooleilla
+
+- Mahdollista mm. muokkaamalla URL:ia
+
+- Voidaan pyrkiä estämään erilaisilla toimilla, kuten: virheellisten kirjautumisien ilmoituksilla tai poistaa web palvelimen hakemistolistaus rootista.
 
 Karvinen 2023: https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/
 
@@ -183,7 +191,7 @@ Kuva 10 Korjattu haavoittuvuus
 
 Nyt en päässyt enää samalla tavalla verkkosivun admin consoleen, joten uskon korjanneeni vian.
 
-## Lähteet: (kesken)
+## Lähteet:
 
 Karvinen 2006. Raportin kirjoittaminen. Luettavissa: https://terokarvinen.com/2006/raportin-kirjoittaminen-4/ Luettu: 19.1.2026.
 
