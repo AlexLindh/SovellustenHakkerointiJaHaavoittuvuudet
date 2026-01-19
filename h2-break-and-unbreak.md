@@ -21,7 +21,7 @@ PortSwigger: https://portswigger.net/web-security/access-control
 
 Karvinen 2006: https://terokarvinen.com/2006/raportin-kirjoittaminen-4/
 
-## a) Break into 010-staff-only (kesken)
+## a) Break into 010-staff-only
 
 Aloitin asentamalla virtuaalikoneelleni ensin tehtäväpaketit Karvisen verkkosivuilta (https://terokarvinen.com/hack-n-fix/)
 
@@ -40,7 +40,9 @@ Lähdin lähestymään tehtävää tunnilla käynneillä opeillani, eli SQL inje
 
 Heti aluksi huomasin, että PIN alueelle, ei pystynyt kirjoittamaan muuta kuin numeroita, joten kävin tutkimassa ja peukaloimassa inspect elementillä kyseistä kohdetta.
 
-!KUVA1
+<img width="667" height="784" alt="kuva" src="https://github.com/user-attachments/assets/560385eb-4120-4558-82ef-51ace44a1fc2" />
+
+Kuva 1 Firefox inspect element
 
 Huomasin, että input type oli number, joten otin sen vain kokonaan pois ja kirjoitin PIN -kenttään seuraavan SQL injektio -hyökkäyskoodin
 
@@ -57,7 +59,9 @@ Lopullinen koodi olisi siis:
 
 Joten täten kyselyn pitäisi palauttaa salasana koska ehto: `pin='' OR 1=1` on TRUE
 
-!KUVA2
+<img width="673" height="802" alt="kuva" src="https://github.com/user-attachments/assets/d21f8551-d27a-4a0a-b309-9e2ce6ca8dd1" />
+
+Kuva 2 SQL -injektio
 
 Tämä palautti minulle vain salasanan "foo", eikä haluttua salasanaa, joten lähdin tutkimaan asiaa. Huomasin Teron (https://terokarvinen.com/hack-n-fix/) vinkeissä puhuvan LIMIT ehdosta ja perehdyin siihen hieman tarkemmin.
 
@@ -80,7 +84,9 @@ Ensimmäisessä koodissa: `LIMIT 2,1` kerrotaan ensin kuinka monen rivin yli hyp
 
 Joten toisella yrityksellä `LIMIT 1 OFFSET 2` palautti minulle myös oikean salasanan.
 
-!KUVA3
+<img width="1004" height="686" alt="kuva" src="https://github.com/user-attachments/assets/61380c50-f1fe-4263-9013-35c2b6661324" />
+
+Kuva 3 Lopputulos
 
 ## b) Fix the vulnerability in 010-staff-only (kesken)
 
@@ -88,19 +94,25 @@ Olin aikaisemmilla kursseilla kuullut, että SQL injektioilta pystyy suojautumaa
 
 Sillä oma osaaminen ohjelmoinnissa ja koodissa on hieman ruosteessa lähdin googlettelemaan miten parametrisiä kyselyitä käytetään ja kirjoitetaan pythonissa. Kysyin myös tekoälyltä apuja tässä tehtävässä
 
-!KUVA alk koodi
+<img width="617" height="156" alt="kuva" src="https://github.com/user-attachments/assets/804d761c-5077-4f6d-8cda-826743f9be29" />
+
+Kuva 4 Alkuperäinen ohjelmakoodi
 
 Sain selville, että `pin='"+pin+"'` osuus koodissa lukee käyttäjän kirjoittaman tekstin ja lisää sen suoriltaan tähän koodin, tämän takia myös SQL injektio on mahdollista.
 
 Pienen etsimisen jälkeen löysin, että pin koodi voidaan tallettaa erilliseen muuttujaan, joka estää suoran hyökkäyksen.
 
-!KUVA muutettu koodi
+<img width="623" height="164" alt="kuva" src="https://github.com/user-attachments/assets/fb04836b-b3e0-427b-8a55-aaa2cc84e4bb" />
+
+Kuva 5 Muutettu ohjelmakoodi
 
 Tämän muutoksen jälkeen testasin uudestaan saada salasanaa, mutta se epäonnistui. Näin koodi tuli korjattua.
 
-!KUVA lopputulos
+<img width="766" height="781" alt="kuva" src="https://github.com/user-attachments/assets/f4f71c94-2d0a-4322-93e5-1854aea3ceb5" />
 
-## c) Solve dirfuzt-1 (kesken)
+Kuva 6 Korjattu verkkosivu
+
+## c) Solve dirfuzt-1
 
 Tein ensin dirfuzt-0 tehtävän teron sivujen mukaan. (https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/)
 
@@ -114,9 +126,11 @@ Vastauksia tuli yllättävästä todella monta ja tarkistelin mitä samaa suurim
 
 Tämän jälkeen jäi vain versiohallinta sivut .git alta ja Admin Page josta kävin hakemassa liput!
 
-!KUVA7 
+<img width="1004" height="573" alt="kuva" src="https://github.com/user-attachments/assets/48c4b41d-9fd2-463b-976f-3b7d1cc15d59" />
 
-## d) Break into 020-your-eyes-only (kesken)
+Kuva 7 ./git/logs & /wp-admin -verkkosivujen flagit
+
+## d) Break into 020-your-eyes-only
 
 Ohjeiden mukaan kunnes pääs tekee->
 
@@ -141,9 +155,11 @@ Tämän jälkeen päätin testata uudestaan `admin-console` -sivua, jonka ffuf m
 
 Vaihettuani urlin oikeaksi pääsin sisälle admin consoleen.
 
-!KUVA admin console
+<img width="572" height="475" alt="kuva" src="https://github.com/user-attachments/assets/21fd44f6-c661-4418-9346-ca148df576d0" />
 
-## e) Fix the vulnerability in 020-your-eyes-only (kesken)
+Kuva 8 Admin Console
+
+## e) Fix the vulnerability in 020-your-eyes-only
 
 Uskoin, että ongelma on selvästi jossakin kohtaa ohjelmakoodia, mikä tarkistaa saako käyttäjä tarkistella verkkosivuja, sillä normaalilla käyttäjällä pääsi tarkastelemaan Admin paneelia. Lähdinkin tätä kautta etsimään, missä vika voisi olla. Hetken aikaa löytämättäni tarkistin ohjeiden apusivulta, että pitääpi etsiä tiedostoa nimeltä `views.py`
 
@@ -155,11 +171,15 @@ Pienen tutkinnan jälkeen huomasin, että tiedostossa on verkkosivulla olevien s
 
 Huomasin, että AdminDashboardView:n kohdalla oli lisätty koodi: `and self-request.user.is:staff`, jota ei ollut lisätty AdminShowAllView:n kohdalla.
 
-!KUVA10 koodia
+<img width="917" height="455" alt="kuva" src="https://github.com/user-attachments/assets/19562276-0157-4d7e-956d-d6f3975f15cf" />
+
+Kuva 9 hats/views.py -ohjelmakoodi, johon lisätty aikaisemmin mainittu rivi
 
 Päätin lisätä kyseisen koodinpätkän myös alemmalle riville ja testata, pääsisinkö enään samalla tavalla Admin Consoleen.
 
-!KUVA9 lopputulos
+<img width="1004" height="550" alt="kuva" src="https://github.com/user-attachments/assets/a83764de-8234-4c32-a133-4138de619f86" />
+
+Kuva 10 Korjattu haavoittuvuus
 
 Nyt en päässyt enää samalla tavalla verkkosivun admin consoleen, joten uskon korjanneeni vian.
 
