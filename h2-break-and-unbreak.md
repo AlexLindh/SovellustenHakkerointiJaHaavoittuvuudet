@@ -88,7 +88,7 @@ Joten toisella yrityksellä `LIMIT 1 OFFSET 2` palautti minulle myös oikean sal
 
 Kuva 3 Lopputulos
 
-## b) Fix the vulnerability in 010-staff-only (kesken)
+## b) Fix the vulnerability in 010-staff-only
 
 Olin aikaisemmilla kursseilla kuullut, että SQL injektioilta pystyy suojautumaan käyttämällä parametrisiä kyselyitä. Lähdinkin tätä kautta tarkistelemaan lähdekoodia.
 
@@ -114,9 +114,9 @@ Kuva 6 Korjattu verkkosivu
 
 ## c) Solve dirfuzt-1
 
-Tein ensin dirfuzt-0 tehtävän teron sivujen mukaan. (https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/)
+Aloitin ensin tekemällä dirfuzt-0 tehtävän Karvisen sivujen ohjeiden mukaisesti. (https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/)
 
-Aloitin dirfuzt-1 -tehgtävän ajamalla ffuf työkalun kyseisellä sivulle komennolla:
+Aloitin dirfuzt-1 -tehtävän ajamalla ffuf työkalun kyseisellä sivulle komennolla:
 
         $ ffuf -w common.txt -u http://127.0.0.2:8000
 
@@ -132,7 +132,7 @@ Kuva 7 ./git/logs & /wp-admin -verkkosivujen flagit
 
 ## d) Break into 020-your-eyes-only
 
-Ohjeiden mukaan kunnes pääs tekee->
+Aloitin tehtävänannon Karvisen sivun ohjeiden mukaisesti, kunnes sain kohde verkkosivun pystyyn. (https://terokarvinen.com/hack-n-fix/)
 
 Aloitin sivun tutkimisen ja päädyin lopputulokseen, että yritän kirjautua Admin dashboard sivulle käyttämällä SQL injektiota.
 
@@ -185,16 +185,14 @@ Nyt en päässyt enää samalla tavalla verkkosivun admin consoleen, joten uskon
 
 ## Lähteet: (kesken)
 
-https://terokarvinen.com/hack-n-fix/
+Karvinen 2006. Raportin kirjoittaminen. Luettavissa: https://terokarvinen.com/2006/raportin-kirjoittaminen-4/ Luettu: 19.1.2026.
 
-https://owasp.org/Top10/2021/A01_2021-Broken_Access_Control/index.html
+Karvinen 2023. Find Hidden Web Directories - Fuzz URLs with ffuf. Luettavissa: https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/ Luettu: 19.1.2026.
 
-https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/
+Karvinen 2024. Hack'n Fix. Luettavissa: https://terokarvinen.com/hack-n-fix/ Luettu: 19.1.2026.
 
-https://portswigger.net/web-security/access-control
+OWASP 2021. A01:2021 - Broken access control. Luettavissa: https://owasp.org/Top10/2021/A01_2021-Broken_Access_Control/index.html Luettu: 19.1.2026
 
-https://terokarvinen.com/2006/raportin-kirjoittaminen-4/
+PortSwigger s.a. Access control vulnerabilities and privilege escalation. Luettavissa: https://portswigger.net/web-security/access-control Luettu: 19.1.2026
 
-https://www.w3schools.com/mysql/mysql_limit.asp
-
-https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/
+W3Schools s.a. MySQL LIMIT Clause. Luettavissa: https://www.w3schools.com/mysql/mysql_limit.asp Luettu: 19.1.2026.
