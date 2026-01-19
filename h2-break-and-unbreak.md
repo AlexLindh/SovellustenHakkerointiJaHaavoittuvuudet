@@ -11,7 +11,7 @@ Windows 11, AMD
 Oracle VirtualBox 7.2.2, Debian 13, NAT -network.
 
 
-## X) Lue ja tiivistä
+## X) Lue ja tiivistä (kesken)
 
 OWASP: OWASP Top 10 https://owasp.org/Top10/2021/A01_2021-Broken_Access_Control/index.html
 
@@ -21,7 +21,7 @@ PortSwigger: https://portswigger.net/web-security/access-control
 
 Karvinen 2006: https://terokarvinen.com/2006/raportin-kirjoittaminen-4/
 
-## a) Break into 010-staff-only
+## a) Break into 010-staff-only (kesken)
 
 Aloitin asentamalla virtuaalikoneelleni ensin tehtäväpaketit Karvisen verkkosivuilta (https://terokarvinen.com/hack-n-fix/)
 
@@ -82,7 +82,7 @@ Joten toisella yrityksellä `LIMIT 1 OFFSET 2` palautti minulle myös oikean sal
 
 !KUVA3
 
-## b) Fix the vulnerability in 010-staff-only
+## b) Fix the vulnerability in 010-staff-only (kesken)
 
 Olin aikaisemmilla kursseilla kuullut, että SQL injektioilta pystyy suojautumaan käyttämällä parametrisiä kyselyitä. Lähdinkin tätä kautta tarkistelemaan lähdekoodia.
 
@@ -100,7 +100,7 @@ Tämän muutoksen jälkeen testasin uudestaan saada salasanaa, mutta se epäonni
 
 !KUVA lopputulos
 
-## c) Solve dirfuzt-1
+## c) Solve dirfuzt-1 (kesken)
 
 Tein ensin dirfuzt-0 tehtävän teron sivujen mukaan. (https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/)
 
@@ -116,7 +116,7 @@ Tämän jälkeen jäi vain versiohallinta sivut .git alta ja Admin Page josta k�
 
 !KUVA7 
 
-## d) Break into 020-your-eyes-only
+## d) Break into 020-your-eyes-only (kesken)
 
 Ohjeiden mukaan kunnes pääs tekee->
 
@@ -143,9 +143,9 @@ Vaihettuani urlin oikeaksi pääsin sisälle admin consoleen.
 
 !KUVA admin console
 
-## e) Fix the vulnerability in 020-your-eyes-only
+## e) Fix the vulnerability in 020-your-eyes-only (kesken)
 
-## Lähteet:
+## Lähteet: (kesken)
 
 https://terokarvinen.com/hack-n-fix/
 
