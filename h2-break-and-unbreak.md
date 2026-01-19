@@ -21,13 +21,27 @@ OWASP 2021: https://owasp.org/Top10/2021/A01_2021-Broken_Access_Control/index.ht
 
 - Mahdollista mm. muokkaamalla URL:ia
 
-- Voidaan pyrkiä estämään erilaisilla toimilla, kuten: virheellisten kirjautumisien ilmoituksilla tai poistaa web palvelimen hakemistolistaus rootista.
+- Voidaan pyrkiä estämään erilaisilla toimilla, kuten: virheellisten kirjautumisien ilmoituksilla tai poistaa web palvelimen hakemistolistaus rootista
 
 Karvinen 2023: https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/
 
+- FFUF on fuzzeri, millä voi löytää piilotettuja hakemistoja helposti verkkosivuilta automaattisesti
+
+- Nopea ja helppokäyttöinen, kai vähän laiton kans
+
+- Toimii sanalistalla, joka käy nopeasti kaikki sanalistan mahdolliset hakemistot läpi
+
 PortSwigger: https://portswigger.net/web-security/access-control
 
+- Pääsynhallinnalla pyritään autentikoimaan, saako käyttäjä käyttää tiettyjä toimia omilla tunnuksilla/rooleilla
+
+- Rikkinäisellä pääsynhallinnalla pyritään muokkaamaan omia tunnuksia tai itse verkkosivua siten, että saadaan piilossa tai salassa oleva tieto, ilman siihen tarvittavia tunnuksia
+
 Karvinen 2006: https://terokarvinen.com/2006/raportin-kirjoittaminen-4/
+
+- Hyvän raportin pitäisi olla toistettava, täsmällinen, helppolukuinen ja lähteisiin viittaava
+
+- Pitää olla myös todenmukainen, eli kaikki mitä on raportissa kirjoittanu tekevänsä, on myös oikeasti tehty ja mahd. todistettu
 
 ## a) Break into 010-staff-only
 
