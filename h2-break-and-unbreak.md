@@ -145,6 +145,24 @@ Vaihettuani urlin oikeaksi pääsin sisälle admin consoleen.
 
 ## e) Fix the vulnerability in 020-your-eyes-only (kesken)
 
+Uskoin, että ongelma on selvästi jossakin kohtaa ohjelmakoodia, mikä tarkistaa saako käyttäjä tarkistella verkkosivuja, sillä normaalilla käyttäjällä pääsi tarkastelemaan Admin paneelia. Lähdinkin tätä kautta etsimään, missä vika voisi olla. Hetken aikaa löytämättäni tarkistin ohjeiden apusivulta, että pitääpi etsiä tiedostoa nimeltä `views.py`
+
+Lähdin etsimään ensiksi `accounts/` -hakemistosta, koska oletin käyttäjien oikeuksien olevan kyseisessä hakemistossa, josta löysin kyseisen tiedoston. Pienen tutkinnan jälkeen päädyin, että tämä tiedosto ei ole oikea, joten jatkoin etsimistä.
+
+Seuraavaksi löysin itseni `hats/` -hakemistosta, jossa oli saman niminen tiedosto, mitä etsin. Avasin tiedoston lähdekoodin ja aloin tarkastelemaan koodia.
+
+Pienen tutkinnan jälkeen huomasin, että tiedostossa on verkkosivulla olevien sivujen osat: MyDataView, AdminDashboardView & AdminShowAllView.
+
+Huomasin, että AdminDashboardView:n kohdalla oli lisätty koodi: `and self-request.user.is:staff`, jota ei ollut lisätty AdminShowAllView:n kohdalla.
+
+!KUVA10 koodia
+
+Päätin lisätä kyseisen koodinpätkän myös alemmalle riville ja testata, pääsisinkö enään samalla tavalla Admin Consoleen.
+
+!KUVA9 lopputulos
+
+Nyt en päässyt enää samalla tavalla verkkosivun admin consoleen, joten uskon korjanneeni vian.
+
 ## Lähteet: (kesken)
 
 https://terokarvinen.com/hack-n-fix/
