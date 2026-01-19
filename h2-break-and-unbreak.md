@@ -102,7 +102,46 @@ Tämän muutoksen jälkeen testasin uudestaan saada salasanaa, mutta se epäonni
 
 ## c) Solve dirfuzt-1
 
+Tein ensin dirfuzt-0 tehtävän teron sivujen mukaan. (https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/)
+
+Aloitin dirfuzt-1 -tehgtävän ajamalla ffuf työkalun kyseisellä sivulle komennolla:
+
+        $ ffuf -w common.txt -u http://127.0.0.2:8000
+
+Vastauksia tuli yllättävästä todella monta ja tarkistelin mitä samaa suurimmalla osalla sivuista olisi. Huomasin, että suurimman osan koko oli 154 joten filteröin tämän pois seuraavalla komennolla:
+
+        $ ffuf -w common.txt -u http://127.0.0.2:8000 -fs 154
+
+Tämän jälkeen jäi vain versiohallinta sivut .git alta ja Admin Page josta kävin hakemassa liput!
+
+!KUVA7 
+
 ## d) Break into 020-your-eyes-only
+
+Ohjeiden mukaan kunnes pääs tekee->
+
+Aloitin sivun tutkimisen ja päädyin lopputulokseen, että yritän kirjautua Admin dashboard sivulle käyttämällä SQL injektiota.
+
+Pienen tovin jälkeen en edennyt minnekkään, joten testasin ffuf komentoa
+
+        $ ffuf -w common.txt -u http://127.0.0.1:8000/FUZZ
+
+Palautuksena sain vaIn yhden sivun, nimeltä: `admin-console`.
+
+Kokeilin kyseistä sivua, mutta pyysi samaa kirjautumista.
+
+Pienen pohtimisen jälkeen päädyin rekisteröitymään sivulle uutena käyttäjänä:
+
+    testperson
+    tester321
+
+Pääsin täten tarkastelemaan "Your personal data" -sivua ja huomasin, että admin dashboard antaa vain: 403 Forbidden koodia.
+
+Tämän jälkeen päätin testata uudestaan `admin-console` -sivua, jonka ffuf minulle antoi ja huomasin, että Admin dashboard nappula vie väärälle sivulle (admin-dashboard) jota ei varmaankaan ole edes olemassa.
+
+Vaihettuani urlin oikeaksi pääsin sisälle admin consoleen.
+
+!KUVA admin console
 
 ## e) Fix the vulnerability in 020-your-eyes-only
 
