@@ -2,7 +2,7 @@
 
 Tämä tehtävä raportti on luotu Iso-Anttila Lari & Karvinen Tero "Sovellusten Hakkerointi ja Haavoittuvuudet" -Kurssille.
 
-### Laiteisto
+### Laitteisto
 
 Tehtävän aikana käytin seuraavia laitteita ja ohjelmia:
 
