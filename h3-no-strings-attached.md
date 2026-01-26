@@ -40,11 +40,13 @@ Make a new version of the passtr.c program where the password doesn't appear dir
 
 Koska oma osaamiseni ohjelmoinnissa on hieman ruosteessa lähdin kysymään AI:lta erilaisia tapoja obfuskoida koodia promptilla:
 
-    "different rtypes of obfuscation for a program code"
+    "different types of obfuscation for a program code"
 
 Sainkin paljon erilaisia vastauksia joista XOR encryptaus ja itse salasanan pilkkominen tuntui parhaalta vaihtoehdolta.
 
 Lähdinkin kokeilemaan XOR encyptausta, koska tässä ei olisi missään kohtaan kirjoitetu salasanaa selkokielisenä lähdekoodiin. Ajattelin, että tämä olisi parempi tapa salata salasana, kuin kirjoittaa se selkokielisenä pilkottuna muutamaan eri paikkaan.
+
+Luin hieman XOR:sta ja kyselin myös apuja tekoälyltä promptilla: `Give me an exmaple of a XOR encyption in C program code`
 
 <img width="1004" height="544" alt="kuva" src="https://github.com/user-attachments/assets/b71b5609-ff61-4c15-96dd-c46b92fd894c" />
 
@@ -52,11 +54,11 @@ Kuva 4 Ohjelmakoodi uudelleenkirjoitettu
 
 Lisäsin Karvisen alkuperäiseen koodiin rivit:
 
-`char encrypt[] = { 0x38, 0x31, ... 0x6a, 0x00 };`:
+`char encrypt[] = { 0x38, 0x31, ... 0x6a, 0x00 };`: Luodaan uusi merkkijono, johon tallennetaan salasana hexana.
 
-`for (int i = 0; encypt[i]; i++) encrypt[i] ^= ox5b;`:
+`for (int i = 0; encypt[i]; i++) encrypt[i] ^= 0x5b;`: Ottaa edellisestä taulukosta merkin kerrallaan ja purkaa sen XOR avaimella 0x5b.
 
-`if (strcmp(password, encrypt) == 0)`:
+`if (strcmp(password, encrypt) == 0)`: Vertaa käyttäjän syöttämää salasanaa ja encrypt -muuttujassa olevaa salasanaa.
 
 Tämän jälkeen tallensin uuden koodin ja ajoin komennon `strings passtr` uudestaan.
 
@@ -107,8 +109,9 @@ Kokeilinkin vielä salasanaa, että se on varmasti oikein.
 Kuva 8 Oikea salasana ja lippu
 
 ## Lähteet
-https://terokarvinen.com/application-hacking/#laksyt
 
-https://upx.github.io/
+Application hacking 2026. h3 No Strings Attached (Tero). Luettavissa: https://terokarvinen.com/application-hacking/#laksyt. Luettu 26.1.2026.
 
-chatgpt - Different obfuscation 
+UPX team 2024. UPX the Ultimate Packer for eXecutables. Luettavissa: https://upx.github.io/. Luettu: 26.1.2026.
+
+Malforge Academy 2025. XOR Obfuscation: Hiding Shellcode from Basic AV. Luettavissa: https://sid4hack.medium.com/xor-obfuscation-hiding-shellcode-from-basic-av-65940817d35a. Luettu: 26.1.2026.
