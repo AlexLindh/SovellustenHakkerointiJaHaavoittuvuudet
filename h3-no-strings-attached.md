@@ -64,7 +64,7 @@ Lisäsin Karvisen alkuperäiseen koodiin rivit:
 
 `char encrypt[] = { 0x38, 0x31, ... 0x6a, 0x00 };`: Luodaan uusi merkkijono, johon tallennetaan salasana hexana.
 
-`for (int i = 0; encypt[i]; i++) encrypt[i] ^= 0x5b;`: Ottaa edellisestä taulukosta merkin kerrallaan ja purkaa sen XOR avaimella 0x5b.
+`for (int i = 0; encrypt[i]; i++) encrypt[i] ^= 0x5b;`: Ottaa edellisestä taulukosta merkin kerrallaan ja purkaa sen XOR avaimella 0x5b.
 
 `if (strcmp(password, encrypt) == 0)`: Vertaa käyttäjän syöttämää salasanaa ja encrypt -muuttujassa olevaa salasanaa.
 
