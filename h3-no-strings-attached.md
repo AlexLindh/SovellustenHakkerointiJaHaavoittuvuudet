@@ -1,6 +1,14 @@
 # h3 No Strings Attached
 
+Tämä tehtävä raportti on luotu Iso-Anttila Lari & Karvinen Tero "Sovellusten Hakkerointi ja Haavoittuvuudet" -Kurssille.
+
 ## Laitteisto
+
+Tehtävän aikana käytin seuraavia laitteita ja ohjelmia:
+
+Windows 11, AMD
+
+Oracle VirtualBox 7.2.2, Debian 13, NAT -network.
 
 ## a) Strings
 
