@@ -90,7 +90,7 @@ Löysin itseni UPX:n virallisilta sivuilta ja päädyin asentamaan ohjelman:
 
     $ wget https://github.com/upx/upx/releases/download/v5.1.0/upx-5.1.0-amd64_linux.tar.xz
 
-    $ tar upx-5.1.0-amd64_linux.tar.xz
+    $ tar -xf upx-5.1.0-amd64_linux.tar.xz
 
 Seuraavaksi tarkistelin UPX help sivuja ja ohjeita miten tätä käytetään.
 
