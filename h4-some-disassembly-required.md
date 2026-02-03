@@ -1,10 +1,14 @@
 # h4 Some Dissassembly Required
 
-todo;
+Tämä tehtävä raportti on luotu Iso-Anttila Lari & Karvinen Tero "Sovellusten Hakkerointi ja Haavoittuvuudet" -Kurssille.
 
-lisätä kuvat läppäriltä ja tehdä b) uudestaan jotta saan loppukuvat
+## Laitteisto
 
-## Laitteisto (KESKEN)
+Tehtävän aikana käytin seuraavia laitteita ja ohjelmia:
+
+Windows 11, AMD
+
+Oracle VirtualBox 7.2.2, Debian 13, NAT -network.
 
 ## Read/watch/listen and summarize. (KESKEN)
 
