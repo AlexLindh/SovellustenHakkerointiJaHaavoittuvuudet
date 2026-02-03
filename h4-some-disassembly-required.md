@@ -41,6 +41,7 @@ Asensin Ghidran ennen tuntia kyseisen ohjeiden mukaisesti (Hooper 2023).
 
 Aloitin Ghidran asentamisen hakemalla githubista uusimman version (NationalSecurityAgency 2026), ja siirtämällä sen /opt/ -hakemistoon.
 
+        $ wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_12.0.2_build/ghidra_12.0.2_PUBLIC_20260129.zip
         $ mv ghidra_10.2.3_PUBLIC_20230208.zip /opt/
 
 Tämän jälkeen purin .zip tiedoston ja vaihdoin sen nimen.
