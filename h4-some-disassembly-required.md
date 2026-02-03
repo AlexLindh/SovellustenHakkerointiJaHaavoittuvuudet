@@ -10,13 +10,50 @@ Windows 11, AMD
 
 Oracle VirtualBox 7.2.2, Debian 13, NAT -network.
 
-## Read/watch/listen and summarize. (KESKEN)
+## Read/watch/listen and summarize.
 
-## a) Install Ghidra (KESKEN)
+Hammond 2022: https://www.youtube.com/watch?v=oTD_ki86c9I
 
-## b) (KESKEN) rever-C. Reverse engineer the packd binary to C language with Ghidra. Find the main program. Give variables descriptive names. Explain the program's operation. Solve the task from the binary, without the original source code.
+Videolla John käänteismallintaa ja ratkaisee PicoCTF #42 tehtävän 'bbbloat'.
 
-Aloitin tehtävien tekemisen lataamalla koneelleni tehtäväpaketin (Karvisen) sivuilta komennolla:
+Erilaisia käytettyjä ohjelmia `ltrace`, `strace`, `ghidra`
+- ltrace on virheenkorjausohjelma, jota käytetään käyttäjäsovelluksien kutsujen näyttämiseen.
+- strace on ohjelma, joka pystyy hakemaan järjestelmäkutsuja.
+- ghidra on käänteismallinnustyökalu. Käytetään binäärien kääntämiseen selkokielisiksi.
+
+Ghidra asennetaan githubista ja tiedosto puretaan. Tarvitsee myös javan asennuksen.
+
+Ghidran käyttö:
+- Luodaan uusi projekti (CTRL+N)
+- Tuodaan uusi tiedosto (I)
+- Avataan tiedosto tuplaklikkaamalla
+- Analyze -> Yes
+
+Erilaisia käytettyjä ghidran työkaluja:
+- Defined Strings, voidaan tarkastella erilaisia muutujia.
+- Decompiler, voidaan tarkastella binääriä selkokielellä.
+- Rename (L), voidaan muokata funkitoiden nimiä helpotaksemme käänteismallinnusta.
+
+
+## a) Install Ghidra
+
+Asensin Ghidran ennen tuntia kyseisen ohjeiden mukaisesti (Hooper 2023).
+
+Aloitin Ghidran asentamisen hakemalla githubista uusimman version (NationalSecurityAgency 2026), ja siirtämällä sen /opt/ -hakemistoon.
+
+        $ mv ghidra_10.2.3_PUBLIC_20230208.zip /opt/
+
+Tämän jälkeen purin .zip tiedoston ja vaihdoin sen nimen.
+
+        $ sudo unzip ghidra_10.2.3_PUBLIC_20230208.zip
+
+        $ sudo mv ghidra_10.2.3_PUBLIC ghidra
+
+Asensin vielä uusimman version javasta ja ghidra toimi käynnistämällä sen ajamalla ohjelman ./ghidraRun.
+
+## b) rever-C. Reverse engineer the packd binary to C language with Ghidra. Find the main program. Give variables descriptive names. Explain the program's operation. Solve the task from the binary, without the original source code.
+
+Aloitin tehtävien tekemisen lataamalla koneelleni tehtäväpaketin (Karvinen 2026) sivuilta komennolla:
 
     $ wget https://terokarvinen.com/loota/yctjx7/ezbin-challenges.zip
     $ unzip ezbin-challenges.zip
@@ -29,8 +66,7 @@ Tarkastelin listing ja defined strings sivuja, mutta en saanut selville mitään
 
 Kuva 1 Packd pakattu käyttäen UPX ohjelmaa
 
-
-Purin packd binäärin käyttäen UPX ohjelmaa (asennusohjeet: oma) ja avaamalla binäärin uudestaan Ghidralla
+Purin packd binäärin käyttäen UPX ohjelmaa (Alex Lindh 2026) ohjeiden mukaisesti ja avaamalla binäärin uudestaan Ghidralla
 
 Nyt kun packd oli purettu niin pystyin tarkaselemaan binäärejä selkokielisinä ja sainkin salasanan `piilos-AnAnAs` selville.
 
@@ -38,18 +74,13 @@ Nyt kun packd oli purettu niin pystyin tarkaselemaan binäärejä selkokielisin�
 
 Kuva 2 Purettu binääri ja salasana selkokielisenä
 
-(KESKEN)
-
-Seuraavaksi muutos ja testaus
-
-
 ## c) If backwards. Modify the passtr program's binary (without the original source code) so that it accepts all passwords except the correct one. Demonstrate with tests that the program works.
 
 Aloitin tehtävän samalla tavalla kuin packd, eli avasin Ghidralla uuden projektin ja laitoin passtr sinne tutkittavaksi.
 
 <img width="1004" height="338" alt="kuva" src="https://github.com/user-attachments/assets/86d7aede-f974-4f78-9cfd-b11c455400b6" />
 
-Kuva 3 Alkuperäinen binääro
+Kuva 3 Alkuperäinen binääri
 
 Menin suoraan if lausekkeeseen ja huomasin, sen olevan JNZ muodossa eli `Jump if not zero`. Vaihdoin tämän päikseen JZ muotoon eli `Jump if zero`. Eli selkokielellä alkuperäisessä koodissa jos oikean salasanan ja käyttäjän syötetyn argumentin ero on 0 (salasana ja argumentti samat) annetaan FLAG käyttäjälle. Tässä vaihdettiin, että jos oikean salasanan ja argumentit ero on 1 (eli ovat erit) palautetaan FLAG ja oikealla salasanalla ja argumentilla (Difference == 0) ei sitä saada.
 
@@ -67,7 +98,7 @@ Nyt väärällä salasanalla pääsee ohjelmassa eteenpäin ja oikealla salasana
 
 ## d) Download the Nora crackme binaries. (KESKEN)
 
-git cloonasin tehtävät
+Latasin tehtävät githubista (NoraCodes 2023) git clone komennolla.
 
 ## e) Solve Nora crackme01 binary.
 
@@ -193,8 +224,16 @@ Pienellä tuurillä päätin kokeilla tuota, mutta ilmeisesti kelpasi! :D
 
 ## Lähteet (KESKEN)
 
-https://terokarvinen.com/application-hacking/#laksyt
+Alex Lindh. 2026. h3 No Strings Attached. Luettavissa: github.com/AlexLindh/SovellustenHakkerointiJaHaavoittuvuudet/blob/main/h3-no-strings-attached.md. Luettu 3.2.2026.
 
-https://www.youtube.com/watch?v=oTD_ki86c9I
+Hooper J. 2023. How to install ghidra. Luettavissa: https://medium.com/@ecojumper30/how-to-install-ghidra-f6592ab002bb. Luettu: 3.2.2026.
 
-github.com/NoraCodes/crackmes
+John Hammond. 27.4.2022. GHIDRA for Reverse Engineering (PicoCTF 2022 #42 'bbbloat'). Katsottavissa: https://www.youtube.com/watch?v=oTD_ki86c9I. Katsottu: 3.2.2026.
+
+NationalSecurityAgency. 2026. ghidra releases. Luettavissa: https://github.com/NationalSecurityAgency/ghidra/releases. Luettu: 3.2.2026.
+
+NoraCodes. 2023. crackmes. Luettavissa: github.com/NoraCodes/crackmes. Luettu: 3.2.2026.
+
+Tero Karvinen. 2026. Application hacking - 2026 Spring. Luettavissa: https://terokarvinen.com/application-hacking/#laksyt. Luettu: 3.2.2026.
+
+
