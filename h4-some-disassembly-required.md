@@ -232,7 +232,7 @@ John Hammond. 27.4.2022. GHIDRA for Reverse Engineering (PicoCTF 2022 #42 'bbblo
 
 NationalSecurityAgency. 2026. ghidra releases. Luettavissa: https://github.com/NationalSecurityAgency/ghidra/releases. Luettu: 3.2.2026.
 
-NoraCodes. 2023. crackmes. Luettavissa: github.com/NoraCodes/crackmes. Luettu: 3.2.2026.
+NoraCodes. 2023. crackmes. Luettavissa: https://github.com/NoraCodes/crackmes. Luettu: 3.2.2026.
 
 Tero Karvinen. 2026. Application hacking - 2026 Spring. Luettavissa: https://terokarvinen.com/application-hacking/#laksyt. Luettu: 3.2.2026.
 
