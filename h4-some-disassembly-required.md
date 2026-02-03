@@ -96,7 +96,7 @@ Kuva 5 Ohjelman testaus
 
 Nyt väärällä salasanalla pääsee ohjelmassa eteenpäin ja oikealla salasanalla ei.
 
-## d) Download the Nora crackme binaries. (KESKEN)
+## d) Download the Nora crackme binaries.
 
 Latasin tehtävät githubista (NoraCodes 2023) git clone komennolla.
 
