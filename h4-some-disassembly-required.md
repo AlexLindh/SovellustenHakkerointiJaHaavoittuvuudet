@@ -222,9 +222,9 @@ Kuva 10 "Oikea" salasana
 
 Pienellä tuurillä päätin kokeilla tuota, mutta ilmeisesti kelpasi! :D
 
-## Lähteet (KESKEN)
+## Lähteet
 
-Alex Lindh. 2026. h3 No Strings Attached. Luettavissa: github.com/AlexLindh/SovellustenHakkerointiJaHaavoittuvuudet/blob/main/h3-no-strings-attached.md. Luettu 3.2.2026.
+Alex Lindh. 2026. h3 No Strings Attached. Luettavissa: https://github.com/AlexLindh/SovellustenHakkerointiJaHaavoittuvuudet/blob/main/h3-no-strings-attached.md. Luettu 3.2.2026.
 
 Hooper J. 2023. How to install ghidra. Luettavissa: https://medium.com/@ecojumper30/how-to-install-ghidra-f6592ab002bb. Luettu: 3.2.2026.
 
