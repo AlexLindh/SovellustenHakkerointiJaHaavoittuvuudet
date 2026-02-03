@@ -25,13 +25,20 @@ Avasin seuraavaksi Ghidran ja loin uuden projektin ja avasin packd binäärin oh
 
 Tarkastelin listing ja defined strings sivuja, mutta en saanut selville mitään muuta, kuin sen, että binääri on pakattu UPX ohjelmalla.
 
-!KUVA1 packd pakattu UPX ohjelmalla!
+<img width="1004" height="81" alt="kuva" src="https://github.com/user-attachments/assets/a260e4ea-81a6-4ed2-896a-f1b0f3c27e29" />
+
+Kuva 1 Packd pakattu käyttäen UPX ohjelmaa
+
 
 Purin packd binäärin käyttäen UPX ohjelmaa (asennusohjeet: oma) ja avaamalla binäärin uudestaan Ghidralla
 
 Nyt kun packd oli purettu niin pystyin tarkaselemaan binäärejä selkokielisinä ja sainkin salasanan `piilos-AnAnAs` selville.
 
-!KUVA2 ghidra ja salasana!
+<img width="1004" height="372" alt="kuva" src="https://github.com/user-attachments/assets/847039aa-e4e0-44b0-bada-a6a2771bdd83" />
+
+Kuva 2 Purettu binääri ja salasana selkokielisenä
+
+(KESKEN)
 
 Seuraavaksi muutos ja testaus
 
@@ -40,17 +47,25 @@ Seuraavaksi muutos ja testaus
 
 Aloitin tehtävän samalla tavalla kuin packd, eli avasin Ghidralla uuden projektin ja laitoin passtr sinne tutkittavaksi.
 
-!KUVA3 alkuperäinen ohjelmakoodi!
+<img width="1004" height="338" alt="kuva" src="https://github.com/user-attachments/assets/86d7aede-f974-4f78-9cfd-b11c455400b6" />
+
+Kuva 3 Alkuperäinen binääro
 
 Menin suoraan if lausekkeeseen ja huomasin, sen olevan JNZ muodossa eli `Jump if not zero`. Vaihdoin tämän päikseen JZ muotoon eli `Jump if zero`. Eli selkokielellä alkuperäisessä koodissa jos oikean salasanan ja käyttäjän syötetyn argumentin ero on 0 (salasana ja argumentti samat) annetaan FLAG käyttäjälle. Tässä vaihdettiin, että jos oikean salasanan ja argumentit ero on 1 (eli ovat erit) palautetaan FLAG ja oikealla salasanalla ja argumentilla (Difference == 0) ei sitä saada.
 
-!KUVA4. JNZ -> JZ
+<img width="709" height="164" alt="kuva" src="https://github.com/user-attachments/assets/e688fd6f-aa4a-4c91-adfa-e5f24634addc" />
+
+Kuva 4 JNZ muoto 
 
 Seuraavaksi exporttasin muokatun binäärin ja testasin toimintoa.
 
-!KUVA5. Testaus ja onnistuminen
+<img width="1004" height="370" alt="kuva" src="https://github.com/user-attachments/assets/5026ce70-ea28-47a5-9fab-e6ec057ffed4" />
 
-## d) Download the Nora crackme binaries.
+Kuva 5 Ohjelman testaus
+
+Nyt väärällä salasanalla pääsee ohjelmassa eteenpäin ja oikealla salasanalla ei.
+
+## d) Download the Nora crackme binaries. (KESKEN)
 
 git cloonasin tehtävät
 
@@ -58,11 +73,15 @@ git cloonasin tehtävät
 
 Aloitin tehtävät lukemalla README.md läpi ja iskinkin heti tehtävien pariin. Ensin `$ make` -komennolla loin skriptit ja loin sitten Ghidraan uudet projektit ja avasin binäärit siellä.
 
-!KUVA6 crackme01 binääri 
+<img width="1004" height="360" alt="kuva" src="https://github.com/user-attachments/assets/7a28a4f1-ed91-4747-95c9-216491ebc526" />
+
+Kuva 6 Crackme01 binääri
 
 Binäärissä luki selkokielellä salasana "password1", joten päätin testata sitä terminaalissa.
 
-!KUVA7 oikea salasana ja väärä salasana
+<img width="816" height="173" alt="kuva" src="https://github.com/user-attachments/assets/2858284f-1322-4aa4-9a48-4935ae65a641" />
+
+Kuva 7 Salasanojen testaus
 
 Salasana toimi ja testasin vielä, että jokin muu salasana ei toiminut.
 
@@ -70,11 +89,15 @@ Salasana toimi ja testasin vielä, että jokin muu salasana ei toiminut.
 
 Aloitin samalla tavalla kuin edellisessä kohdassa.
 
-!KUVA8 Binääri ja salasana selkokielellä
+<img width="1004" height="419" alt="kuva" src="https://github.com/user-attachments/assets/5ab7c14c-8f63-491c-9d47-7f5046a503da" />
 
-Päätin heti kokeilla salasanaa "slm!pass.k"terminaalissa.
+Kuva 8 Crackme01e binääri
 
-!KUVA9 salasana yritykset
+Salasana oli taas selkokielisenä ja päätin heti kokeilla salasanaa "slm!pass.k" terminaalissa.
+
+<img width="913" height="356" alt="kuva" src="https://github.com/user-attachments/assets/b88bd0fb-2dce-4f96-a219-39f73acdd3c4" />
+
+Kuva 9 Salasana yritykset
 
 Huomasin, että huutomerkin kanssa minulle tulee eri argumentti, kuin se yrittäisi ajaa jotain uutta muuta koodia, joten laitoin salasanan hipsukoiden sisään ja pääsin tällä läpi.
 
@@ -162,7 +185,9 @@ heissulivei: `käyttäjän kirjoittama salasanayritys & 2. argumentti`
 
 Lähdin liikkelle muutoksessa nro3 olevasta pointista. Jos antaisin salasanaksi "/0" eli en mitään pääsisinkö suoraan läpi.
 
-!KUVA10 Onnistunut "salasana"
+<img width="723" height="117" alt="kuva" src="https://github.com/user-attachments/assets/b4943846-e651-48ff-926a-115d91d453a7" />
+
+Kuva 10 "Oikea" salasana
 
 Pienellä tuurillä päätin kokeilla tuota, mutta ilmeisesti kelpasi! :D
 
