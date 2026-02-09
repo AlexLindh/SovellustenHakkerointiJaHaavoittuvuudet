@@ -91,6 +91,24 @@ Sain selville, että ylivuotoa tapahtuu koska i arvo yrittää lukea taulukosta 
 
 ## lab1
 
+Aloitin ajamalla ihan ensiksi ohjelman josta tuli seuraava syöte takaisin:
+
+    alex@debian:~/h5/lab1$ ./gdb_example1
+    Khoor/#zruog1
+    Segmentation fault
+
+lähdin tämän jälkeen debuggerilla ohjelman kimppuun!
+
+!KUVA4!
+
+Sain koodista sen verran selville, että siinä tulostetaan teksti, jonka jokaiseen merkkiin on lisätty muuttuja i=3. Päätin testata muuttaa sanan "Hello, world." ASCII numeroiksi ja lisätä jokaiseen 3. Täten sain vastaukseksi Khoor/#zruog1. 
+
+Käydessäni debuggeria läpi huomasin sen ottavan teksin "Hello, world." ja tekevän sen kaikille kirjaimille muutoksen, jonka jälkeen se tulosti kyseisen tekstin. Bad_messagen=NULL kohdassa tätä ei tapahtunut. Ajattelin sen olevan sen takia koska null ei ole mitään, joten ei ole mitään mitä muokata. Päätin laittaa null tekstin heittomerkkien sisään ja testaamalla vielä toisella tekstipätkällä koodia.
+
+!KUVA 5!
+
+Ongelma löytyikin juuri siitä ja heittomerkit korjasivat tilanteet!
+
 ## lab2
 
 ## lähteet
