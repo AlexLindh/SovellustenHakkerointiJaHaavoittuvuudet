@@ -14,7 +14,9 @@ En saanut listattua lähdekoodia, enkä ymmärtänyt oikein mistään mitään j
 
 Nyt sain listattua koodin ja pääsin ymmärtämään sitä hieman paremmin.
 
-!KUVA1!
+<img width="617" height="848" alt="kuva" src="https://github.com/user-attachments/assets/96ffc64e-c8ed-4b18-b212-8c77d8442471" />
+
+Kuva 1 Alkuperäinen ohjelmakoodi
 
 Lähdin siten ohjeiden mukaisesti liikkumaan ja tarkistelemaan samalla koodia.
 
@@ -49,7 +51,9 @@ Vaihdoin täten `n--` -> `--n`, joka ensin vähentää luvusta yhden ja sitten v
 
 Ymmärsin lukiessani, että nytten ei tule ongelmaa jossa kerrotaan luku 0, koska vähennyksen jälkeen koodi itsessään tarkistaa onko n > 0 ja kertoo luvun.
 
-!KUVA 2!
+<img width="473" height="239" alt="kuva" src="https://github.com/user-attachments/assets/f7d3a632-778c-48d8-8356-21fb87010da2" />
+
+Kuva 2 Ohjelmakoodin testaus
   
 ## lab0
 
@@ -87,7 +91,9 @@ Lähdin tutkimaan enemmän koodissa olevasta kommentista, jossa kerrottiin että
 
 Sain selville, että ylivuotoa tapahtuu koska i arvo yrittää lukea taulukosta indexiä 5, jota ei ole olemassa. Täten yhtäsuuruusmerkki on otettava pois.
 
-!KUVA3!
+<img width="1004" height="544" alt="kuva" src="https://github.com/user-attachments/assets/71a70acf-2f9e-4ef6-91db-9c9210bfcecd" />
+
+Kuva 3 Ohjelmakoodin testaus
 
 ## lab1
 
@@ -99,13 +105,17 @@ Aloitin ajamalla ihan ensiksi ohjelman josta tuli seuraava syöte takaisin:
 
 lähdin tämän jälkeen debuggerilla ohjelman kimppuun!
 
-!KUVA4!
+<img width="756" height="755" alt="kuva" src="https://github.com/user-attachments/assets/961bb645-cae6-4913-b536-034ba481f861" />
+
+Kuva 4 Alkuperäinen ohjelmakoodi
 
 Sain koodista sen verran selville, että siinä tulostetaan teksti, jonka jokaiseen merkkiin on lisätty muuttuja i=3. Päätin testata muuttaa sanan "Hello, world." ASCII numeroiksi ja lisätä jokaiseen 3. Täten sain vastaukseksi Khoor/#zruog1. 
 
 Käydessäni debuggeria läpi huomasin sen ottavan teksin "Hello, world." ja tekevän sen kaikille kirjaimille muutoksen, jonka jälkeen se tulosti kyseisen tekstin. Bad_messagen=NULL kohdassa tätä ei tapahtunut. Ajattelin sen olevan sen takia koska null ei ole mitään, joten ei ole mitään mitä muokata. Päätin laittaa null tekstin heittomerkkien sisään ja testaamalla vielä toisella tekstipätkällä koodia.
 
-!KUVA 5!
+<img width="669" height="839" alt="kuva" src="https://github.com/user-attachments/assets/31ba7212-b5f4-47e7-8440-338d7cd2135a" />
+
+Kuva 5 Ohjelmakoodin testaus
 
 Ongelma löytyikin juuri siitä ja heittomerkit korjasivat tilanteet!
 
@@ -131,7 +141,9 @@ Sain ohjeeksi, että voin vaihtaa suoraan tuossa koodin tarkistelussa komennot. 
 
 Käytetty komento: `set {unsigned char}0x555555555107 = 0x74`: 0x74 vastaa komentoa je
 
-!Kuva6!
+<img width="1004" height="571" alt="kuva" src="https://github.com/user-attachments/assets/480e1cad-9647-406f-9a63-951ed2753ed5" />
+
+Kuva 6 Muokattu koodi jne -> je kohdassa <main+135>
 
 Lähdin liikkumaan nexti komennolla eteenpäin ja pääsin if lauseen sisälle, josta sain lipun tulostettua. 
 
