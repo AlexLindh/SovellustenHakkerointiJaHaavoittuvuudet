@@ -111,6 +111,46 @@ Ongelma löytyikin juuri siitä ja heittomerkit korjasivat tilanteet!
 
 ## lab2
 
+Lähdin aluksi GNU debuggerilla ratkomaan tehtävää, mutta en löytänyt juuri mistään mitään. Lähdin tämän jälkeen rivi riviltä tutkimaan jos mikään aukeaisi minulle :D
+
+Asetin ensiksi break kohdan mainille sekä funktiolle check_password, jotka sain selville komennolla: `info functions`.
+
+Ainoat asiat mitkä huomasin:
+
+`<main+62>  rep movsl  %ds:(%rsi),%es:(rdi)`: Jonkinlainen tarkistus muuttujan rcx arvolle 20 kertaa, samalla rsi ja rdi arvo nousee neljällä tavulla.
+
+`<main+110>  call  0x555555555060 <_isoc99_scanf@plt>`: Kysyy syötettä salasanalle ja tallentaa sen mahdollisesti %rdi muuttujaan??
+
+`<main+123>  call  0x55555555525a <mAsdf3a>`: Aloittaa uuden funktion, jossa mahdollisesti tarkistetaan ja verrataan syöte(salasana) oikean salasanan kanssa??
+
+`<main+135>  jne  0x555555555119 <main+153>`: Tapahtuu hyppy kohtaan <main+153> salasana syötteen tarkistuksen jälkeen. Mahdollinen if -lauseke joka hyppää seuraavaan jos vertaus ei ole sama.
+
+Tästä tuli mieleen edellisissä ghidra tehtävissä olevan if -lausekkeen kääntäminen ja lähdin tätä kautta kyselemään tekoälyltä, onko mahdollista muokata koodia GNU:n sisällä
+
+Sain ohjeeksi, että voin vaihtaa suoraan tuossa koodin tarkistelussa komennot. Vaihdoin komennon jne -> je, jotta koodi ei hyppäisi if lauseen yli.
+
+Käytetty komento: `set {unsigned char}0x555555555107 = 0x74`: 0x74 vastaa komentoa je
+
+!Kuva6!
+
+Lähdin liikkumaan nexti komennolla eteenpäin ja pääsin if lauseen sisälle, josta sain lipun tulostettua. 
+
+Kokeilin tämän jälkeen strings työkalua josta osui silmään kohta `anLTj4u8`, jota luulin tehtävän salasanaksi. Kokeiltuani kyseistä salasanaa en tosin saanut lippua.
+
+Uskon tuon olevan tehtävän salasana, jolle pitää vain tehdä jonkinlainen merkkienmuunnos, jota en saanut selville tehtävän tekemisen aikana.
+
+Jatkan vielä mahdollisesti, jos saisin itse salasanan selville käyttäen GNU debuggeria tai ghidraa.
+
 ## lähteet
 
-https://cplusplus.com/doc/tutorial/operators/
+ChatGPT
+
+Cplusplus. s.a. Operators. Luettavissa: https://cplusplus.com/doc/tutorial/operators/. Luettu: 9.2.2026.
+
+Haaga Helia ammattikorkeakoulu. s.a. GNU Debugger (GDB). Sovellusten hakkerointi ja haavoittuvuudet -opintojakson apumateriaalit Moodlessa. Haaga-Helia ammattikorkeakoulu. Luettu: 9.2.2026
+
+Low Level. 17.4.2021. GDB is REALLY easy! Find Bugs in Your Code with Only A Few Commands. Video. Katsottavissa: https://youtu.be/Dq8l1_-QgAc. Katsottu: 9.2.2026
+
+Path Cybersec. 29.3.2021. GDB Tutorial for Reverse Engineers: Breakpoints, Modifying Memory and Printing its Contents. Video. Katsottavissa: https://youtu.be/nLp3hr6Jf2M. Katsottu: 9.2.2026.
+
+
