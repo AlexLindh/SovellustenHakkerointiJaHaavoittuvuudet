@@ -53,4 +53,5 @@ LibreOffice antoi ensiksi errorin, että tiedosto on korruptoitunut, mutta voisi
 
 ## Lähteet
 
+Haaga Helia ammattikorkeakoulu. s.a. Sulautetu järjestlemät. Sovellusten hakkerointi ja haavoittuvuudet -opintojakson apumateriaalit Moodlessa. Haaga-Helia ammattikorkeakoulu. Luettu:
 Tero Karvinen. 2026. Application hacking - 2026 Spring. Luettavissa: https://terokarvinen.com/application-hacking/#laksyt. Luettu: 
