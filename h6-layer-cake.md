@@ -79,7 +79,21 @@ Kuva ? Key + IV
 
 ### extract rootfs from the dump file
 
+Sain purettua dumppi -tiedoston ja saamaan sieltä rootfs hakemistot/tiedostot seuraavilla komennoilla:
+
+    $ binwalk -e dump-tapo-c200v3-1.4.2.bin
+    $ cd _dump-tapo-c200v3-1.4.2.bin.extracted
+    $ cd squashfs-root
+
+KUva 0.2
+
 ### extract rootfs from the image file
+
+Aloitin ensin binwalkilla, mutta se ei löytänyt mitään. Mutta kun olin aikaisemmin tehtävässä käyttänyt bin/tp-link-decrypt -työkalua, joka oli luonut uuden tiedoston .bin tiedostosta nimeltä .bin.dec.
+
+Sain binwalkilla tämän tiedston purettua ja avattua.
+
+!KUVA0.3!
 
 ### search available applications
 
