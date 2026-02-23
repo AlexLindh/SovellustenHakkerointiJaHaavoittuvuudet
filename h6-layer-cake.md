@@ -111,6 +111,7 @@ Haaga Helia ammattikorkeakoulu. s.a. Hardware hacking. Sovellusten hakkerointi j
 
 Haaga Helia ammattikorkeakoulu. s.a. Sulautetu järjestelmät. Sovellusten hakkerointi ja haavoittuvuudet -opintojakson apumateriaalit Moodlessa. Haaga-Helia ammattikorkeakoulu. Luettu: 23.2.2026.
 
+Robbins. 2025. tp-link-decrypt. Luettavissa: https://github.com/robbins/tp-link-decrypt. Luettu 23.2.2026.
+
 Tero Karvinen. 2026. Application hacking - 2026 Spring. Luettavissa: https://terokarvinen.com/application-hacking/#laksyt. Luettu: 23.2.2026.
 
-Robbins. 2025. tp-link-decrypt. Luettavissa: https://github.com/robbins/tp-link-decrypt. Luettu 23.2.2026.
