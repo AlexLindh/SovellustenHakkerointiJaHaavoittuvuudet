@@ -85,7 +85,9 @@ Sain purettua dumppi -tiedoston ja saamaan sieltä rootfs hakemistot/tiedostot s
     $ cd _dump-tapo-c200v3-1.4.2.bin.extracted
     $ cd squashfs-root
 
-KUva 0.2
+<img width="1004" height="490" alt="kuva" src="https://github.com/user-attachments/assets/8c1a2f3c-2045-4351-ac3b-3dd6283b2a83" />
+
+Kuva ? Purettu dumppitiedosto ja sen sisältö
 
 ### extract rootfs from the image file
 
@@ -93,7 +95,11 @@ Aloitin ensin binwalkilla, mutta se ei löytänyt mitään. Mutta kun olin aikai
 
 Sain binwalkilla tämän tiedston purettua ja avattua.
 
-!KUVA0.3!
+<img width="1004" height="578" alt="kuva" src="https://github.com/user-attachments/assets/5bb1aa7b-2a6d-4400-8298-23c7286a3f52" />
+
+Kuva ? Purettu kuvatiedosto
+
+Puretun kuvatiedoston squashfs-root/ -hakemistossa oli samanlainen sisältö kuin dumpissa.
 
 ### search available applications
 
