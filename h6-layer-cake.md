@@ -16,13 +16,17 @@ Aloitin wget https://terokarvinen.com/application-hacking/h1.jpg
 
 Aloin tutkimaan kuvaa perustavoilla ja erilaisilla opituilla työkaluille kuten file ja strings.
 
-!KUVA1! file
+<img width="1004" height="101" alt="kuva" src="https://github.com/user-attachments/assets/5c52a588-fe38-41f6-988a-341ad847bacd" />
+
+Kuva 1 Kuvan tutkimista file -komennolla
 
 Filen avulla sain selville, että kuva on JPEG muodossa ja pikselikoko on 1024x1024.
 
 Stringsin avulla sain suurimmaksi osaksi 4-5 merkkisiä jonoja irti kuvasta. Päätin testata myös asettaa stringisille minimipituuden komennolla `$ strings -n 10 h1.jpg`.
 
-!KUVA2! strings
+<img width="827" height="859" alt="kuva" src="https://github.com/user-attachments/assets/14a63a3e-36e0-4468-8be4-b1fbfbbce063" />
+
+Kuva 2 Kuvan tutkimista strings -komenolla
 
 Stringsillä sain selville, että kuvassa on piilotettu ilmeisemmin jotain word tiedostoja tai asetuksia?
 
@@ -32,13 +36,19 @@ Aloitin ensin asentamalla binwalkin komennolla: `$ sudo apt-get install binwalk`
 
 Päätin heti kokeilla binwalkkia kuvaan ja sain tulosteeksi, että mahdollisesti kuvan metadataan on piilotettu pakattuja tiedostoja. Päätin katsoa binwalkin manuaalisivuilta pystynkö, jotenkin purkamaan näitä tiedostoja ja sain selville, että --extract (-e) lisäkomennolla saisin purettua tiedostot.
 
-!KUVA3! binwalk
+<img width="1004" height="318" alt="kuva" src="https://github.com/user-attachments/assets/88b83623-99c3-467c-b160-c5f4290f4ce0" />
 
-!KUVA4! purettu
+Kuva 3 Kuvan tutkimista binwalk -komennolla
+
+<img width="477" height="803" alt="kuva" src="https://github.com/user-attachments/assets/7477c355-77eb-4219-bf26-3163f9981932" />
+
+Kuva 4 Purettu kuvatiedosto
 
 Purettuani huomasin tämän luovan uuden hakemiston ja .zip -tiedoston kyseiseen hakemistoon. Yritin purkaa kyseistä .zip -tiedostoa, mutta se ei ollut mahdollista. Errorin mukaan tiedosto mahdollisesti ei ole oikea .zip -tiedosto.
 
-!KUVA5! unzip+file
+<img width="775" height="252" alt="kuva" src="https://github.com/user-attachments/assets/8da3174d-85f7-49ce-8066-31c64aef0013" />
+
+Kuva 5 Puretun tiedoston tutkimista
 
 Päätin tarkastaa mikä tiedosto kyseinen 494F5.zip -tiedosto oikeasti on ja lopputulemaksi tuli Microsoft Word dokumentti. 
 
@@ -46,7 +56,9 @@ Päätin vaihtaa tiedoston nimen .docx loppuiseksi, että pääsisin avaamaan se
 
 LibreOffice antoi ensiksi errorin, että tiedosto on korruptoitunut, mutta voisi yrittää korjata tiedoston. Painoin "Kyllä" ja tämä avasi minulle word tiedoston.
 
-!KUVA6! word tiedosto.
+<img width="1004" height="748" alt="kuva" src="https://github.com/user-attachments/assets/11d3b3bb-729f-4b9d-bbdf-8051380d02e0" />
+
+Kuva 6 Piilossa ollut word tiedosto
 
 
 ## Lab2: FOSS (Free Android OpenSource) Tutustu listaan eri android applikaatioita. Valitse listalla itsellesi mielenkiintoisin applikaatio ja mene sen GitHubiin. Lataa ohjelman APK itsellesi ja käytä seuraavia työkaluja tutustuaksesi miten APK:n voi avata. ZIP, JADX, Bytecode-viewer.
