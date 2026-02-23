@@ -71,7 +71,9 @@ Kuva 6 Piilossa ollut word tiedosto
 
 Normaali binwalk ei antanut minulle mitään tuosta kuvatiedostosta, joten päätin yrittää tehtävässä asenenettua työkalua ja sain tulosteeksi seuraavan:
 
-!KUVA0.1!
+<img width="1106" height="520" alt="kuva" src="https://github.com/user-attachments/assets/1f024901-3f68-4893-bef4-0af8877f6adb" />
+
+Kuva ? Key + IV
 
 ### Analyse the image file
 
