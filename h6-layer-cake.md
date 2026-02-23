@@ -63,6 +63,26 @@ Kuva 6 Piilossa ollut word tiedosto
 
 ## Lab2: FOSS (Free Android OpenSource) Tutustu listaan eri android applikaatioita. Valitse listalla itsellesi mielenkiintoisin applikaatio ja mene sen GitHubiin. Lataa ohjelman APK itsellesi ja käytä seuraavia työkaluja tutustuaksesi miten APK:n voi avata. ZIP, JADX, Bytecode-viewer.
 
+## Hardware hacking
+
+### Different tasks:
+
+### decrypt firmware image
+
+Normaali binwalk ei antanut minulle mitään tuosta kuvatiedostosta, joten päätin yrittää tehtävässä asenenettua työkalua ja sain tulosteeksi seuraavan:
+
+!KUVA0.1!
+
+### Analyse the image file
+
+### extract rootfs from the dump file
+
+### extract rootfs from the image file
+
+### search available applications
+
+### analyse and try to open root password
+
 ## Lähteet
 
 Haaga Helia ammattikorkeakoulu. s.a. Sulautetu järjestelmät. Sovellusten hakkerointi ja haavoittuvuudet -opintojakson apumateriaalit Moodlessa. Haaga-Helia ammattikorkeakoulu. Luettu:
