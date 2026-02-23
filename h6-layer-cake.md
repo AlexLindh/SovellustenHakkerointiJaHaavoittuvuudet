@@ -12,7 +12,7 @@ Oracle VirtualBox 7.2.2, Debian 13, NAT -network.
 
 ## Lab0: Tutki tiedostoa h1.jpg, jo opituilla työkaluilla mitä saat selville?
 
-Aloitin wget https://terokarvinen.com/application-hacking/h1.jpg
+Aloitin lataamalla kohdetiedoston komennolla: `$ wget https://terokarvinen.com/application-hacking/h1.jpg`
 
 Aloin tutkimaan kuvaa perustavoilla ja erilaisilla opituilla työkaluille kuten file ja strings.
 
