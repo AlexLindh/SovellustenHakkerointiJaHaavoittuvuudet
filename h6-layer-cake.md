@@ -63,6 +63,63 @@ Kuva 6 Piilossa ollut word tiedosto
 
 ## Lab2: FOSS (Free Android OpenSource) Tutustu listaan eri android applikaatioita. Valitse listalla itsellesi mielenkiintoisin applikaatio ja mene sen GitHubiin. Lataa ohjelman APK itsellesi ja käytä seuraavia työkaluja tutustuaksesi miten APK:n voi avata. ZIP, JADX, Bytecode-viewer.
 
+Aloitin ensin tutkimalla erilaisia sovelluksia ja valitsin kohdesovelluksekseni "Atmos Weather" -sovelluksen. Asensin sovelluksen .apk:n tekijän github sivujen releases osiosta komennolla:
+
+    $ wget https://github.com/atticuscornett/AtmosWeather/releases/download/v3.0.4/app-release.apk
+
+Loin tämän jälkeen jokaiselle työkalulle uuden hakemiston minne asentaisin ne.
+
+!KUVA 7!
+
+### Zip
+
+Aloitin zipillä ja kuten normaalistikkin unzippaus käytin seuraavaa komentoa:
+
+    $ unzip ../app-release.apk
+
+!KUVA8! purettu apk tiedosto
+
+### Jadx
+
+Aloitin ensin asentamalla JADX:in hakemalla niiden omilta github sivuilta ja komennolla:
+
+    $ wget https://github.com/skylot/jadx/releases/download/v1.5.4/jadx-1.5.4.zip
+
+Purin tiedoston ja testasin, että ohjelma toimii.
+
+KUVA9 - tyhjä jadx proju
+
+Aloitin uuden projektin ja avasin aikaisemmin ladatun .apk tiedoston tällä.
+
+Kuva10 - jadx gui
+
+Seuraavaksi testasin myös purkamista käyttäen JADX työkalua seuraavalla komennolla.
+
+    $ jadx -d purku ../app-release.apk
+
+`jadx -d`: Komento ja -d purkaa tiedoston.
+
+`purku`: Luo hakemiston nimeltä "purku" ja vie puretun tiedoston sinne.
+
+`../app-release.apk`: Polku missä purettava tiedosto on.
+
+KUVA11 - purettu tiedosto
+
+### Bytecode-viewer
+
+Aloitin asentamalla Bytecode-viewerin githubista komennolla:
+
+    $ wget https://github.com/Konloch/bytecode-viewer/releases/download/v2.13.2/Bytecode-Viewer-2.13.2.jar
+
+Käynnistin sovelluksen komennolla:
+
+    $ java -jar Bytecode-Viewer-2.13.2.jar
+
+KUVA12 bcv
+
+Loin uuden projektin Bytecode-viewerissä ja toin aikaisemmin lataamani .apk -tiedoston tähän.
+
+
 ## Hardware hacking
 
 ### Different tasks:
@@ -115,3 +172,8 @@ Robbins. 2025. tp-link-decrypt. Luettavissa: https://github.com/robbins/tp-link-
 
 Tero Karvinen. 2026. Application hacking - 2026 Spring. Luettavissa: https://terokarvinen.com/application-hacking/#laksyt. Luettu: 23.2.2026.
 
+https://github.com/atticuscornett/AtmosWeather
+
+https://github.com/skylot/jadx
+
+https://github.com/Konloch/bytecode-viewer/
