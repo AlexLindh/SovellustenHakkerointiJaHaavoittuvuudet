@@ -69,7 +69,9 @@ Aloitin ensin tutkimalla erilaisia sovelluksia ja valitsin kohdesovelluksekseni 
 
 Loin tämän jälkeen jokaiselle työkalulle uuden hakemiston minne asentaisin ne.
 
-!KUVA 7!
+<img width="514" height="173" alt="kuva" src="https://github.com/user-attachments/assets/d621eed2-5df2-4a9d-8b95-e86a20efebb2" />
+
+Kuva 7 Asennettu .apk ja hakemistot
 
 ### Zip
 
@@ -77,7 +79,9 @@ Aloitin zipillä ja kuten normaalistikkin unzippaus käytin seuraavaa komentoa:
 
     $ unzip ../app-release.apk
 
-!KUVA8! purettu apk tiedosto
+<img width="1004" height="106" alt="kuva" src="https://github.com/user-attachments/assets/ed01ec0a-dfd8-48cc-878a-e0ce21cc28ed" />
+
+Kuva 8 Purettu .apk tiedosto käyttäen unzip komentoa
 
 ### Jadx
 
@@ -87,11 +91,15 @@ Aloitin ensin asentamalla JADX:in hakemalla niiden omilta github sivuilta ja kom
 
 Purin tiedoston ja testasin, että ohjelma toimii.
 
-KUVA9 - tyhjä jadx proju
+<img width="1004" height="614" alt="kuva" src="https://github.com/user-attachments/assets/8a74539b-3438-4df7-891f-a37629534b72" />
+
+Kuva 9 Tyhjä JADX graafinen käyttöliittymä
 
 Aloitin uuden projektin ja avasin aikaisemmin ladatun .apk tiedoston tällä.
 
-Kuva10 - jadx gui
+<img width="666" height="758" alt="kuva" src="https://github.com/user-attachments/assets/49f0418f-80ad-4885-9d09-a99802e87f8a" />
+
+Kuva 10 JADX käyttöliittymä .apk tiedostolle
 
 Seuraavaksi testasin myös purkamista käyttäen JADX työkalua seuraavalla komennolla.
 
@@ -103,7 +111,9 @@ Seuraavaksi testasin myös purkamista käyttäen JADX työkalua seuraavalla kome
 
 `../app-release.apk`: Polku missä purettava tiedosto on.
 
-KUVA11 - purettu tiedosto
+<img width="1004" height="419" alt="kuva" src="https://github.com/user-attachments/assets/14831a63-363c-4509-8ab5-84a21662b1cc" />
+
+Kuva 11 Purettu .apk -tiedosto käyttäen jadx:ia
 
 ### Bytecode-viewer
 
@@ -115,10 +125,15 @@ Käynnistin sovelluksen komennolla:
 
     $ java -jar Bytecode-Viewer-2.13.2.jar
 
-KUVA12 bcv
+<img width="1000" height="708" alt="kuva" src="https://github.com/user-attachments/assets/77f198a7-40e9-4948-9c4f-1105fd7232d1" />
+
+Kuva 12 Tyhjä bytecode-viewer graafinen käyttöliittymä
 
 Loin uuden projektin Bytecode-viewerissä ja toin aikaisemmin lataamani .apk -tiedoston tähän.
 
+<img width="1004" height="333" alt="kuva" src="https://github.com/user-attachments/assets/3bf43d4e-6dbe-4171-b051-b18148039b4d" />
+
+Kuva 13 Avattu .apk -tiedosto käyttäen bytecode-vieweriä
 
 ## Hardware hacking
 
@@ -130,7 +145,7 @@ Normaali binwalk ei antanut minulle mitään tuosta kuvatiedostosta, joten pää
 
 <img width="1106" height="520" alt="kuva" src="https://github.com/user-attachments/assets/1f024901-3f68-4893-bef4-0af8877f6adb" />
 
-Kuva ? Key + IV
+Kuva 14 Key + IV
 
 ### Analyse the image file
 
@@ -144,7 +159,7 @@ Sain purettua dumppi -tiedoston ja saamaan sieltä rootfs hakemistot/tiedostot s
 
 <img width="1004" height="490" alt="kuva" src="https://github.com/user-attachments/assets/8c1a2f3c-2045-4351-ac3b-3dd6283b2a83" />
 
-Kuva ? Purettu dumppitiedosto ja sen sisältö
+Kuva 15 Purettu dumppitiedosto ja sen sisältö
 
 ### extract rootfs from the image file
 
@@ -154,7 +169,7 @@ Sain binwalkilla tämän tiedston purettua ja avattua.
 
 <img width="1004" height="578" alt="kuva" src="https://github.com/user-attachments/assets/5bb1aa7b-2a6d-4400-8298-23c7286a3f52" />
 
-Kuva ? Purettu kuvatiedosto
+Kuva 16 Purettu kuvatiedosto
 
 Puretun kuvatiedoston squashfs-root/ -hakemistossa oli samanlainen sisältö kuin dumpissa.
 
@@ -164,16 +179,17 @@ Puretun kuvatiedoston squashfs-root/ -hakemistossa oli samanlainen sisältö kui
 
 ## Lähteet
 
+Atticuscornett. 2025. AtmosWeather. Luettavissa: https://github.com/atticuscornett/AtmosWeather/. Luettu 24.2.2026.
+
 Haaga Helia ammattikorkeakoulu. s.a. Hardware hacking. Sovellusten hakkerointi ja haavoittuvuudet -opintojakson apumateriaalit Moodlessa. Haaga-Helia ammattikorkeakoulu. Luettu: 23.2.2026.
 
 Haaga Helia ammattikorkeakoulu. s.a. Sulautetu järjestelmät. Sovellusten hakkerointi ja haavoittuvuudet -opintojakson apumateriaalit Moodlessa. Haaga-Helia ammattikorkeakoulu. Luettu: 23.2.2026.
 
+Konloch. 2026. bytecode-viewer. Luettavissa: https://github.com/Konloch/bytecode-viewer/. Luettu 24.2.2026.
+
 Robbins. 2025. tp-link-decrypt. Luettavissa: https://github.com/robbins/tp-link-decrypt. Luettu 23.2.2026.
+
+Skylot. 2026. jadx. Luettavissa: https://github.com/skylot/jadx/. Luettu 24.2.2026.
 
 Tero Karvinen. 2026. Application hacking - 2026 Spring. Luettavissa: https://terokarvinen.com/application-hacking/#laksyt. Luettu: 23.2.2026.
 
-https://github.com/atticuscornett/AtmosWeather
-
-https://github.com/skylot/jadx
-
-https://github.com/Konloch/bytecode-viewer/
