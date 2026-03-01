@@ -37,3 +37,5 @@ https://terokarvinen.com/python-for-hackers/
 https://www.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/08_chap01.html#chap01-sec001
 
 https://terokarvinen.com/application-hacking/#laksyt
+
+https://cryptopals.com/sets/1
