@@ -60,6 +60,13 @@ Kuva 3 Skriptin lopputulos
 
 ## c) 3. Single-byte XOR cipher
 
+Tehtävässä oli hex -merkkijono, jonka kaikki tavut oltiin XORrattu yhdellä tuntemattomalla merkillä, joka pitäisi löytää käyttämällä skriptiä, joka tekee vertauksen kaikilla merkeillä ja laskee todennäköisyyden ja tulostaa parhaan mahdollisen vastauksen. 
+
+Sain luotua seuraavanlaisen skriptinpätkän:
+
+
+
+
 ## d) 4. Detect single-character XOR
 
 ## Lähteet
@@ -75,3 +82,7 @@ https://cryptopals.com/sets/1
 https://cryptopals.com/sets/1/challenges/1
 
 https://cryptopals.com/sets/1/challenges/2
+
+https://cryptopals.com/sets/1/challenges/3
+
+https://cryptopals.com/sets/1/challenges/4
