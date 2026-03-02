@@ -60,7 +60,7 @@ Kuva 3 Skriptin lopputulos
 
 ## c) 3. Single-byte XOR cipher
 
-Tehtävässä oli hex -merkkijono, jonka kaikki tavut oltiin XORrattu yhdellä tuntemattomalla merkillä, joka pitäisi löytää käyttämällä skriptiä, joka tekee vertauksen kaikilla merkeillä ja laskee todennäköisyyden ja tulostaa parhaan mahdollisen vastauksen. Todennäköisyys laskettaisiin kirjaimilla, mitä käytetään yleisimmin englanninkielisissä teksteissä.
+Tehtävässä oli hex -merkkijono, jonka kaikki tavut oltiin XORrattu yhdellä tuntemattomalla merkillä, joka pitäisi löytää käyttämällä skriptiä, joka tekee vertauksen kaikilla merkeillä ja laskee todennäköisyyden ja tulostaa parhaan mahdollisen vastauksen. Todennäköisyys laskettaisiin kirjaimilla, mitä käytetään yleisimmin englanninkielisessä kirjallisuudessa.
 
 Sain luotua seuraavanlaisen skriptinpätkän kommenteilla:
 
@@ -88,7 +88,7 @@ Sain luotua seuraavanlaisen skriptinpätkän kommenteilla:
 
     results.sort(reverse=True)
 
-    # Tulostetaan parhaat 5 tulosta
+    # Tulostetaan parhaat 5 tulosta, jossa mukana pisteet, käytetty avain ja teksti
     for s, key, plaintext in results[5:]:
         print("Score: {s}, Key: {Key(hex)}, Text: {plaintext.decode}")
 
