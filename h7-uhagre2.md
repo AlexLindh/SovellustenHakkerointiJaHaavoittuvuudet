@@ -145,7 +145,11 @@ Vastauksena sain suhtkoht yksinkertaisen vastauksen, että samalla tavalla kuin 
     print("Paras rivi: ", best_line)
     print("Käytetty avain: ", hex(best_key))
     print("Purettu teksti: ", best_plaintext.decode)
-    
+
+<img width="1004" height="179" alt="kuva" src="https://github.com/user-attachments/assets/d40a59a6-cbbc-4b46-8787-4e2bd731e06b" />
+
+Kuva 5 Skriptin lopputulos
+
 ## Lähteet
 
 https://terokarvinen.com/python-for-hackers/
