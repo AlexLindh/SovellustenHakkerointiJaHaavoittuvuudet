@@ -96,7 +96,7 @@ Sain luotua seuraavanlaisen skriptinpätkän kommenteilla:
 
 Kuva 4 Skriptin lopputulos
 
-Tehtävän voittajana toimi tänään MCpekoni.
+Tehtävän voittajana toimi tänään MCpekoni merkillä 0x58 eli "X".
 
 ## d) 4. Detect single-character XOR
 
