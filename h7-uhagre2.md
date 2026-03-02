@@ -24,6 +24,8 @@ Python basics for Hackers
 
 ## a) 1. Convert hex to base64
 
+Tehtävänanto luettavissa: https://cryptopals.com/sets/1/challenges/1
+
 Tehtävässä pyydettiin luomaan skripti, joka pyytää hex syötettä ja muuttaa sen base64 muotoon.
 
 <img width="1004" height="403" alt="kuva" src="https://github.com/user-attachments/assets/2431d8bf-5c09-4dc0-b84a-9d1c351bc7d3" />
@@ -37,6 +39,8 @@ Kuva 1 skripti ja lopputulos
 `b64 = base64.b64encode(tavut)`: Luo muuttujan "b64", joka saa base64 koodatun arvon "tavut" -tavujonosta.
 
 ## b) 2. Fixed XOR
+
+Tehtävänanto luettavissa: https://cryptopals.com/sets/1/challenges/2
 
 Toisessa tehtävässä pyydettiin luomaan skripti, joka pyytää kahta samanpituista hex -merkkijonoa ja tulostaa näiden XOR yhdistelmän.
 
@@ -59,6 +63,8 @@ Sain apuja, että pystyisin muodostamaan uuden zip objektin, jonka tavujonoja vo
 Kuva 3 Skriptin lopputulos
 
 ## c) 3. Single-byte XOR cipher
+
+Tehtävänanto luettavissa: https://cryptopals.com/sets/1/challenges/3
 
 Tehtävässä oli hex -merkkijono, jonka kaikki tavut oltiin XORrattu yhdellä tuntemattomalla merkillä, joka pitäisi löytää käyttämällä skriptiä, joka tekee vertauksen kaikilla merkeillä ja laskee todennäköisyyden ja tulostaa parhaan mahdollisen vastauksen. Todennäköisyys laskettaisiin kirjaimilla, mitä käytetään yleisimmin englanninkielisessä kirjallisuudessa.
 
@@ -99,6 +105,8 @@ Kuva 4 Skriptin lopputulos
 Tehtävän voittajana toimi tänään MCpekoni merkillä 0x58 eli "X".
 
 ## d) 4. Detect single-character XOR
+
+Tehtävänanto luettavissa: https://cryptopals.com/sets/1/challenges/4
 
 Tehtävä oli samanlainen, kuin edellinen, mutta erona tässä oli vain, että alkuperäinen merkkijono on myös tuntematon, joka löytyisi ladattavasta listasta, jossa on mukana 60 erilaista hex -merkkijonoa. Aloitin lataamalla kyseisen listan `$ wget https://cryptopals.com/static/challenge-data/4.txt`
 
@@ -167,3 +175,5 @@ https://cryptopals.com/sets/1/challenges/2
 https://cryptopals.com/sets/1/challenges/3
 
 https://cryptopals.com/sets/1/challenges/4
+
+https://terokarvinen.com/getting-started-python-cryptopals/
