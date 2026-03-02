@@ -14,11 +14,57 @@ Oracle VirtualBox 7.2.2, Debian 13, NAT -network.
 
 1.1 Terminology
 
+- Viestien salaustekniikkaa kutsutaan kryptokrafiaksi
+- Salaustekstien purkamista kutsutaan kryptoanalyysiksi
+- Kryptokrafia ja -analyysi kuuluvat kryptologian alle
+- Kryptokrafiassa salauksen lisäksi odotetaan täyttyvän myös todentaminen, eheys ja kiistämättömyys
+- Kryptografinen salausmenetelmä (cipher) on matemaattinen funktio, jota käytetään halutun viestin salaukseen ja purkamiseen
+
 1.4 Simple XOR
+
+- XOR on ekslusiivinen -or funktio joka toimii seuraavanlaisesti:
+
+  0 + 0 = 0
+
+  0 + 1 = 1
+
+  1 + 0 = 1
+  
+  1 + 1 = 0
+
+  Eli verrattavien bittien arvo täytyy olla eri, jotta tulos voi olla tosi
 
 1.7 Large numbers
 
+Kirjan aikana verrataan paljon suuriin lukuihin, joita ei välttämättä pysty suoraan helposti käsittää. Tekijä oli luonutkin taulukon missä käsitteli suuria lukuja, jotta pystyisimme helpommin ymmärtämään kuinka suurista luvuista on oikeasti kyse. Listaan taulukkoon suraavasti muutaman näistä:
+
+|  Tapaus  |  Numero | 
+| --- | --- | 
+|  Aika seuraavaan jääkauteen  |  14 000 vuotta (2^14)  |
+|  Mahdollisuus voittaa päävoitto lotossa (usa) |  1 : 4 000 000 (2^22)  |
+|  Universumin ikä  |  10^10 vuotta (2^34)  |
+|  Atomien määrä maapallolla  |  10^51 (2^170)  |
+|  Atomien määrä universumissa  |  10^77 (2^265)  | 
+|  Aika, jolloin kaikke aine muuttuu mustiksi aukoiksi  |  10^10^76 vuotta |
+
+
 Python basics for Hackers
+
+- Koodin kirjoittaminen pienissä osissa helpottaa koodin luontia ja pienentää virheilmoituksien tapahtuessa kohdealuetta
+- REPL erilaisia kattavia ominaisuuksia:
+
+    - `Nuolinäppäimillä`: pääset selaamaan historiaa
+    - `CTRL + R pääset`: hakemaan historiasta komentoja
+    - `TAB`: ennustava täyttö
+    - `F5`: Tulostaa python skriptin tulosteen
+
+- Englanninkielisessä kirjallisuudessa yleisimmät kirjaimet: ETAOIN SHRDLU
+- Suomenkielisessä kirjallisuudessa yleisimmät kirjaimet: AINTE SLOUK
+- Hyödyllisiä kirjastoja mitä käyttää:
+
+    - requests - web -sivujen lataaminen
+    - binascii - muutaa hex tekstiksi (b2a_hex)
+    - base64 - ASCII -suojaus binäärille
 
 ## CryptoPals Set 1 -challenges
 
