@@ -24,6 +24,19 @@ Python basics for Hackers
 
 ## a) 1. Convert hex to base64
 
+Tehtävässä pyydettiin luomaan skripti, joka pyytää hex syötettä ja muuttaa sen base64 muotoon.
+
+<img width="1004" height="403" alt="kuva" src="https://github.com/user-attachments/assets/2431d8bf-5c09-4dc0-b84a-9d1c351bc7d3" />
+
+Kuva 1 skripti ja lopputulos
+
+`hex = input()`: Luo muuttujan nimeltä "hex", joka saa arvon käyttäjän syötteestä.
+
+`tavut = bytes.fromhex(hex)`: Luo muuttujan nimeltä "tavut", joka saa arvon "hex" -merkkijonon tavukäännöksestä.
+
+`b64 = base64.b64encode(tavut)`: Luo muuttujan "b64", joka saa base64 koodatun arvon "tavut" -tavujonosta.
+
+
 ## b) 2. Fixed XOR
 
 ## c) 3. Single-byte XOR cipher
