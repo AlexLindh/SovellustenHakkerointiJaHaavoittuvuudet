@@ -60,12 +60,43 @@ Kuva 3 Skriptin lopputulos
 
 ## c) 3. Single-byte XOR cipher
 
-Tehtävässä oli hex -merkkijono, jonka kaikki tavut oltiin XORrattu yhdellä tuntemattomalla merkillä, joka pitäisi löytää käyttämällä skriptiä, joka tekee vertauksen kaikilla merkeillä ja laskee todennäköisyyden ja tulostaa parhaan mahdollisen vastauksen. 
+Tehtävässä oli hex -merkkijono, jonka kaikki tavut oltiin XORrattu yhdellä tuntemattomalla merkillä, joka pitäisi löytää käyttämällä skriptiä, joka tekee vertauksen kaikilla merkeillä ja laskee todennäköisyyden ja tulostaa parhaan mahdollisen vastauksen. Todennäköisyys laskettaisiin kirjaimilla, mitä käytetään yleisimmin englanninkielisissä teksteissä.
 
-Sain luotua seuraavanlaisen skriptinpätkän:
+Sain luotua seuraavanlaisen skriptinpätkän kommenteilla:
 
+    # Verrattava hex -merkkijono
+    hex = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
 
+    # Tavukäännös hex -> bytes
+    translate = bytes.fromhex(hex)
 
+    # Muuttuja missä yleisimmät kirjaimet englanninkielisessä kirjallisuudessa
+    common = "ETAOIN SHRDLUetaoinshrdlu"
+
+    # Funktio joka laskee pisteet sen perusteella, kuinka monta yleistä kirjainta se pitää sisällään
+    def scoring(text):
+        return sum(c in common for c in text)
+
+    # Lista, johon kerätään XOR vertauksien tulokset
+    results = []
+
+    # Funktio, joka käy läpi kaikki mahdolliset XOR -avaimet
+    for key in range(256):
+        plaintext = bytes([b ^ key for b in translate])
+        s = scoring(plaintext)
+        results.append((s, key, plaintext))
+
+    results.sort(reverse=True)
+
+    # Tulostetaan parhaat 5 tulosta
+    for s, key, plaintext in results[5:]:
+        print("Score: {s}, Key: {Key(hex)}, Text: {plaintext.decode}")
+
+<img width="984" height="233" alt="kuva" src="https://github.com/user-attachments/assets/6edaca99-ea36-4a35-9ce6-920f74668cf0" />
+
+Kuva 4 Skriptin lopputulos
+
+Tehtävän voittajana toimi tänään MCpekoni.
 
 ## d) 4. Detect single-character XOR
 
