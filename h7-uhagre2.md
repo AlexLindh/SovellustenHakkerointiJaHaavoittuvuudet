@@ -100,6 +100,52 @@ Tehtävän voittajana toimi tänään MCpekoni merkillä 0x58 eli "X".
 
 ## d) 4. Detect single-character XOR
 
+Tehtävä oli samanlainen, kuin edellinen, mutta erona tässä oli vain, että alkuperäinen merkkijono on myös tuntematon, joka löytyisi ladattavasta listasta, jossa on mukana 60 erilaista hex -merkkijonoa. Aloitin lataamalla kyseisen listan `$ wget https://cryptopals.com/static/challenge-data/4.txt`
+
+Kysyin tehtävässä hieman apua tekoälyltä, promptilla: "Kuinka tehdä xor vertailu hex -merkkijonoihin, jotka löytyvät ulkoisesta tekstitiedosta"
+
+Vastauksena sain suhtkoht yksinkertaisen vastauksen, että samalla tavalla kuin edellinen luomani skripti, mutta ilman absoluuttista hexadesimaalimerkkijonoa vaan se hakee tiedostosta hex jonot ja tekee vertailun. Sain muokattua edellistä skriptiä seuraavalla tavalla:
+
+    # Muuttuja missä yleisimmät kirjaimet englanninkielisessä kirjallisuudessa
+    common = "ETAOIN SHRDLUetaoinshrdlu"
+
+    # Funktio joka laskee pisteet sen perusteella, kuinka monta yleistä kirjainta se pitää sisällään
+    def scoring(text: bytes) -> int:
+        return sum(c in common for c in text)
+
+    # Muuttujien lähtökohdat, joihin tallennetaan skriptin aikana parhaat tulokset
+    best_score = -1
+    best_key = None
+    best_plaintext = None
+    best_line = None
+
+    # avaa tiedoston "4.txt" ja käy sen läpi rivi kerrallaan muuntaen kaikki hexadesimaalimerkkijonot tavujonoiksi
+    with open ("4.txt", "r") as f:
+        for line in f:
+            hex = line.strip()
+
+            if not hex:
+                continue
+
+            translate = bytes.fromhex(hex)
+
+            # Funktio joka käy läpi kaikki mahdolliset avaimet
+            for key in range(256):
+                plaintext = bytes([b ^ key for in b in translate])
+                s = scoring(plaintext)
+
+                # Jos jokin avain saa enemmän pisteitä niin se tallennetaan parhaaksi avaimeksi, kunnes kaikki merkit käyty läpi
+                if s > best_score:
+                    best_score = s
+                    best_key = key
+                    best_plaintext = plaintext
+                    best_line = hex
+
+    # Tulostaa parhaan tuloksen edellisen skriptin perusteella
+    print("Paras rivi: ", best_line)
+    print("Käytetty avain: ", hex(best_key))
+    print("Purettu teksti: ", best_plaintext.decode)
+    
 ## Lähteet
 
 https://terokarvinen.com/python-for-hackers/
