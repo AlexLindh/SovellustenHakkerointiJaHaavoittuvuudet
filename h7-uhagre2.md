@@ -206,12 +206,12 @@ Kuva 5 Skriptin lopputulos
 
 ## Lähteet
 
-CryptoPals. s.a. Crypto Challenge Set 1. Luettavissa: https://cryptopals.com/sets/1. Luettu: 
+CryptoPals. s.a. Crypto Challenge Set 1. Luettavissa: https://cryptopals.com/sets/1. Luettu: 3.3.2026.
 
-karvinen. 2024. Getting Started with Cryptopals using Python. Luettavissa: https://terokarvinen.com/getting-started-python-cryptopals/. Luettu: 
+karvinen. 2024. Getting Started with Cryptopals using Python. Luettavissa: https://terokarvinen.com/getting-started-python-cryptopals/. Luettu: 3.3.2026.
 
-Karvinen. 2024. Python Basics for Hackers. Luettavissa: https://terokarvinen.com/python-for-hackers/. Luettu:
+Karvinen. 2024. Python Basics for Hackers. Luettavissa: https://terokarvinen.com/python-for-hackers/. Luettu: 3.3.2026.
 
-Karvinen. 2026. Application hacking - 2026 Spring. Luettavissa: https://terokarvinen.com/application-hacking/#laksyt. Luettu:
+Karvinen. 2026. Application hacking - 2026 Spring. Luettavissa: https://terokarvinen.com/application-hacking/#laksyt. Luettu: 3.3.2026.
 
-Schneier, B. 2015: Applied Cryptography. O'Reilly. E-kirja. Luettavissa: https://www.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/08_chap01.html#chap01-sec001. Luettu: 
+Schneier, B. 2015: Applied Cryptography. O'Reilly. E-kirja. Luettavissa: https://www.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/08_chap01.html#chap01-sec001. Luettu: 3.3.2026.
